@@ -1,0 +1,165 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: var(--font-plus-jakarta), ui-sans-serif, system-ui, sans-serif;
+  --font-display: var(--font-manrope), ui-sans-serif, system-ui, sans-serif;
+
+  /* Palette adapted from tophotelprojects.com */
+  --color-navy-950: #0a1528;
+  --color-navy-900: #0f1f3d;
+  --color-navy-800: #162d53;
+  --color-navy-700: #1c3866;
+  --color-navy-600: #25487a;
+
+  --color-slate-soft: #a8b8cc;
+  --color-slate-muted: #7a8da3;
+  --color-off-white: #f5f7f8;
+  --color-white-soft: #e8eef4;
+
+  --color-accent: #0090a5;
+  --color-accent-bright: #14adc4;
+  --color-accent-dim: #007485;
+  --color-accent-glow: rgba(0, 144, 165, 0.28);
+
+  --color-gold: #febe3b;
+  --color-gold-bright: #ffcf66;
+  --color-mint: #cce9ed;
+
+  --color-metal: #8b97a8;
+  --color-border: rgba(255, 255, 255, 0.08);
+  --color-border-strong: rgba(255, 255, 255, 0.14);
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-navy-950 text-white-soft antialiased;
+    font-family: var(--font-sans);
+    background-image:
+      radial-gradient(ellipse 80% 50% at 50% -20%, rgba(0, 144, 165, 0.14), transparent),
+      linear-gradient(180deg, #0a1528 0%, #0f1f3d 100%);
+    background-attachment: fixed;
+  }
+
+  ::selection {
+    background: rgba(0, 144, 165, 0.35);
+    color: white;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4 {
+    font-family: var(--font-display);
+    letter-spacing: -0.02em;
+  }
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+
+  .grid-tech {
+    background-image:
+      linear-gradient(rgba(255, 255, 255, 0.03) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
+    background-size: 48px 48px;
+  }
+
+  .glass {
+    background: rgba(22, 45, 83, 0.65);
+    backdrop-filter: blur(16px);
+    border: 1px solid var(--color-border);
+  }
+
+  .border-hairline {
+    border: 1px solid var(--color-border);
+  }
+
+  .gradient-text {
+    background: linear-gradient(135deg, #ffffff 0%, #cce9ed 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+  }
+
+  .accent-line {
+    background: linear-gradient(90deg, var(--color-accent), transparent);
+  }
+}
+
+/* Reveal on scroll */
+.reveal {
+  opacity: 0;
+  transform: translateY(28px);
+  transition:
+    opacity 0.7s cubic-bezier(0.22, 1, 0.36, 1),
+    transform 0.7s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.reveal.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.reveal-delay-1 {
+  transition-delay: 0.1s;
+}
+.reveal-delay-2 {
+  transition-delay: 0.2s;
+}
+.reveal-delay-3 {
+  transition-delay: 0.3s;
+}
+.reveal-delay-4 {
+  transition-delay: 0.4s;
+}
+
+/* Network line animation */
+@keyframes dash-flow {
+  to {
+    stroke-dashoffset: -40;
+  }
+}
+
+@keyframes pulse-glow {
+  0%,
+  100% {
+    opacity: 0.4;
+  }
+  50% {
+    opacity: 1;
+  }
+}
+
+@keyframes float-soft {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-8px);
+  }
+}
+
+.animate-dash {
+  animation: dash-flow 2s linear infinite;
+}
+
+.animate-pulse-glow {
+  animation: pulse-glow 3s ease-in-out infinite;
+}
+
+.animate-float {
+  animation: float-soft 6s ease-in-out infinite;
+}
+
+/* Focus styles */
+:focus-visible {
+  outline: 2px solid var(--color-accent);
+  outline-offset: 3px;
+}
