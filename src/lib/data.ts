@@ -25,6 +25,7 @@ export const siteConfig = {
 /** Toggle public sections without deleting code. Set true to re-enable later. */
 export const features = {
   showProjects: false,
+  showLegal: false,
 };
 
 /** Fresh brochure PDF — regenerates from live /brochure/solutions on each download */

@@ -1,13 +1,19 @@
 import type { Metadata } from "next";
+import { notFound } from "next/navigation";
+import { features } from "@/lib/data";
 import { PageHero } from "@/components/ui/PageHero";
 
 export const metadata: Metadata = {
   title: "Privacy Policy",
   description: "Privacy Policy for the LAPTECH website.",
-  robots: { index: false, follow: true },
+  robots: { index: false, follow: false },
 };
 
 export default function PrivacyPage() {
+  if (!features.showLegal) {
+    notFound();
+  }
+
   return (
     <>
       <PageHero

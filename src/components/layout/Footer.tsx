@@ -8,7 +8,6 @@ const companyLinks = [
   { label: "Industries", href: "/industries" },
   { label: "Projects", href: "/projects" },
   { label: "AMC & Support", href: "/amc-support" },
-  { label: "Brand Kit", href: "/brand-kit" },
   { label: "Contact", href: "/contact" },
 ];
 
@@ -115,14 +114,16 @@ export function Footer() {
       <div className="border-t border-white/8">
         <div className="mx-auto flex max-w-7xl flex-col items-start justify-between gap-3 px-4 py-6 text-xs text-slate-muted sm:flex-row sm:items-center sm:px-6 lg:px-8">
           <p>© 2026 LAPTECH. All Rights Reserved.</p>
-          <div className="flex gap-4">
-            <Link href="/privacy" className="hover:text-slate-soft">
-              Privacy Policy
-            </Link>
-            <Link href="/terms" className="hover:text-slate-soft">
-              Terms & Conditions
-            </Link>
-          </div>
+          {features.showLegal ? (
+            <div className="flex gap-4">
+              <Link href="/privacy" className="hover:text-slate-soft">
+                Privacy Policy
+              </Link>
+              <Link href="/terms" className="hover:text-slate-soft">
+                Terms & Conditions
+              </Link>
+            </div>
+          ) : null}
         </div>
       </div>
     </footer>
