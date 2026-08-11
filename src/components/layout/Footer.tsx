@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { siteConfig, services, features } from "@/lib/data";
 import { Icon } from "@/components/ui/Icon";
+import { Logo } from "@/components/ui/Logo";
 
 const companyLinks = [
   { label: "About", href: "/about" },
@@ -18,14 +19,7 @@ export function Footer() {
     <footer className="border-t border-white/8 bg-navy-950">
       <div className="mx-auto grid max-w-7xl gap-10 px-4 py-16 sm:px-6 lg:grid-cols-4 lg:px-8">
         <div>
-          <Link href="/" className="inline-flex items-center gap-2.5">
-            <span className="flex h-9 w-9 items-center justify-center rounded-md border border-accent/30 bg-accent/10 text-sm font-bold text-accent">
-              L
-            </span>
-            <span className="font-display text-lg font-bold tracking-[0.08em] text-white">
-              LAPTECH
-            </span>
-          </Link>
+          <Logo size="lg" showTagline />
           <p className="mt-4 max-w-xs text-sm leading-relaxed text-slate-soft">
             Complete IT Infrastructure, Security & Power Solutions.
           </p>
@@ -75,19 +69,34 @@ export function Footer() {
           <ul className="mt-4 space-y-3 text-sm text-slate-soft">
             <li className="flex items-start gap-2.5">
               <Icon name="phone" className="mt-0.5 h-4 w-4 text-accent" />
-              <span>{siteConfig.contact.phone}</span>
-            </li>
-            <li className="flex items-start gap-2.5">
-              <Icon name="mail" className="mt-0.5 h-4 w-4 text-accent" />
-              <span>{siteConfig.contact.email}</span>
+              <a
+                href={`tel:${siteConfig.contact.phone.replace(/\s/g, "")}`}
+                className="transition hover:text-accent"
+              >
+                {siteConfig.contact.phone}
+              </a>
             </li>
             <li className="flex items-start gap-2.5">
               <Icon name="whatsapp" className="mt-0.5 h-4 w-4 text-accent" />
-              <span>{siteConfig.contact.whatsapp}</span>
+              <a
+                href={`https://wa.me/${siteConfig.contact.whatsapp.replace(/\D/g, "")}`}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="transition hover:text-accent"
+              >
+                {siteConfig.contact.whatsapp}
+              </a>
             </li>
             <li className="flex items-start gap-2.5">
               <Icon name="map" className="mt-0.5 h-4 w-4 text-accent" />
-              <span>{siteConfig.contact.address}</span>
+              <a
+                href={siteConfig.contact.mapsUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="transition hover:text-accent"
+              >
+                {siteConfig.contact.address}
+              </a>
             </li>
           </ul>
         </div>

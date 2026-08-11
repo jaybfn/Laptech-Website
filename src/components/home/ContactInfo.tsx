@@ -9,9 +9,8 @@ function whatsappHref(value: string) {
 }
 
 export function ContactInfo({ compact = false }: { compact?: boolean }) {
-  const whatsapp = siteConfig.contact.whatsapp;
-  const address = siteConfig.contact.address;
-  const isPlaceholder = whatsapp.includes("[") || !whatsapp.replace(/\D/g, "");
+  const { whatsapp, address, mapsUrl, mapsEmbedUrl, phone } = siteConfig.contact;
+  const telHref = `tel:${phone.replace(/\s/g, "")}`;
 
   return (
     <section className={compact ? "py-16" : "py-20 sm:py-28"} id="contact">
@@ -29,62 +28,69 @@ export function ContactInfo({ compact = false }: { compact?: boolean }) {
               discuss your requirements in person.
             </p>
 
-            <div className="mt-8 grid gap-4 sm:grid-cols-2">
-              {isPlaceholder ? (
-                <div className="flex items-start gap-4 border border-accent/25 bg-accent/10 px-5 py-5">
-                  <span className="flex h-11 w-11 shrink-0 items-center justify-center rounded-md border border-accent/30 bg-navy-950/40 text-accent">
-                    <Icon name="whatsapp" className="h-5 w-5" />
-                  </span>
-                  <div>
-                    <p className="text-xs font-semibold uppercase tracking-wider text-slate-muted">
-                      WhatsApp / Call
-                    </p>
-                    <p className="mt-1 text-lg font-semibold text-white">
-                      {whatsapp}
-                    </p>
-                    <p className="mt-1 text-sm text-slate-soft">
-                      Add your number in site settings
-                    </p>
-                  </div>
-                </div>
-              ) : (
-                <a
-                  href={whatsappHref(whatsapp)}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="group flex items-start gap-4 border border-accent/25 bg-accent/10 px-5 py-5 transition hover:border-accent/50 hover:bg-accent/15"
-                >
-                  <span className="flex h-11 w-11 shrink-0 items-center justify-center rounded-md border border-accent/30 bg-navy-950/40 text-accent">
-                    <Icon name="whatsapp" className="h-5 w-5" />
-                  </span>
-                  <div>
-                    <p className="text-xs font-semibold uppercase tracking-wider text-slate-muted">
-                      WhatsApp / Call
-                    </p>
-                    <p className="mt-1 text-lg font-semibold text-white group-hover:text-accent-bright">
-                      {whatsapp}
-                    </p>
-                    <p className="mt-1 text-sm text-slate-soft">
-                      Tap to chat on WhatsApp
-                    </p>
-                  </div>
-                </a>
-              )}
-
-              <div className="flex items-start gap-4 border border-white/10 bg-navy-950/50 px-5 py-5">
-                <span className="flex h-11 w-11 shrink-0 items-center justify-center rounded-md border border-white/10 bg-white/5 text-accent">
-                  <Icon name="map" className="h-5 w-5" />
+            <div className="mt-8 grid gap-4 lg:grid-cols-[minmax(0,0.9fr)_minmax(0,1.4fr)]">
+              <div className="flex items-start gap-4 border border-accent/25 bg-accent/10 px-5 py-5">
+                <span className="flex h-11 w-11 shrink-0 items-center justify-center rounded-md border border-accent/30 bg-navy-950/40 text-accent">
+                  <Icon name="whatsapp" className="h-5 w-5" />
                 </span>
                 <div>
                   <p className="text-xs font-semibold uppercase tracking-wider text-slate-muted">
-                    Visit Our Office
+                    WhatsApp / Call
                   </p>
-                  <p className="mt-1 text-lg font-semibold text-white">
-                    {address}
-                  </p>
+                  <a
+                    href={whatsappHref(whatsapp)}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="mt-1 block text-lg font-semibold text-white transition hover:text-accent-bright"
+                  >
+                    {whatsapp}
+                  </a>
                   <p className="mt-1 text-sm text-slate-soft">
-                    Walk-ins welcome during business hours
+                    Tap to chat on WhatsApp
                   </p>
+                  <a
+                    href={telHref}
+                    className="mt-2 inline-block text-sm font-medium text-accent hover:underline"
+                  >
+                    Or call {phone}
+                  </a>
+                </div>
+              </div>
+
+              <div className="overflow-hidden border border-white/10 bg-navy-950/50">
+                <div className="grid h-full md:grid-cols-[minmax(0,0.95fr)_minmax(0,1.15fr)]">
+                  <div className="flex items-start gap-4 px-5 py-5">
+                    <span className="flex h-11 w-11 shrink-0 items-center justify-center rounded-md border border-white/10 bg-white/5 text-accent">
+                      <Icon name="map" className="h-5 w-5" />
+                    </span>
+                    <div>
+                      <p className="text-xs font-semibold uppercase tracking-wider text-slate-muted">
+                        Visit Our Office
+                      </p>
+                      <p className="mt-1 text-base font-semibold leading-snug text-white">
+                        {address}
+                      </p>
+                      <a
+                        href={mapsUrl}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="mt-3 inline-block text-sm font-medium text-accent transition hover:underline"
+                      >
+                        Open in Google Maps →
+                      </a>
+                    </div>
+                  </div>
+
+                  <div className="relative min-h-52 border-t border-white/10 md:min-h-full md:border-l md:border-t-0">
+                    <iframe
+                      title="LAPTECH office location on Google Maps"
+                      src={mapsEmbedUrl}
+                      className="absolute inset-0 h-full w-full"
+                      loading="lazy"
+                      referrerPolicy="no-referrer-when-downgrade"
+                      allowFullScreen
+                    />
+                  </div>
                 </div>
               </div>
             </div>

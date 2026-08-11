@@ -1,6 +1,7 @@
 import { ecosystemNodes } from "@/lib/data";
 import { SectionHeading } from "@/components/ui/SectionHeading";
 import { Reveal } from "@/components/ui/Reveal";
+import { Logo } from "@/components/ui/Logo";
 
 export function EcosystemSection() {
   return (
@@ -18,11 +19,9 @@ export function EcosystemSection() {
 
         <Reveal delay={2} className="relative mx-auto mt-16 max-w-4xl">
           <div className="absolute left-1/2 top-1/2 z-10 flex h-28 w-28 -translate-x-1/2 -translate-y-1/2 flex-col items-center justify-center rounded-full border border-accent/40 bg-navy-950 shadow-[0_0_60px_rgba(0,168,232,0.25)] sm:h-36 sm:w-36">
-            <span className="font-display text-sm font-bold tracking-[0.15em] text-accent sm:text-base">
+            <Logo href={false} showWordmark={false} size="lg" />
+            <span className="mt-1 font-display text-[10px] font-bold tracking-[0.15em] text-white sm:text-xs">
               LAPTECH
-            </span>
-            <span className="mt-1 text-[10px] uppercase tracking-wider text-slate-muted">
-              Hub
             </span>
           </div>
 

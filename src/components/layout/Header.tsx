@@ -3,9 +3,10 @@
 import Link from "next/link";
 import { useEffect, useState } from "react";
 import { usePathname } from "next/navigation";
-import { mainNav, siteConfig, features } from "@/lib/data";
+import { mainNav, siteConfig, features, solutionsBrochure } from "@/lib/data";
 import { Button } from "@/components/ui/Button";
 import { Icon } from "@/components/ui/Icon";
+import { Logo } from "@/components/ui/Logo";
 
 export function Header() {
   const pathname = usePathname();
@@ -43,33 +44,24 @@ export function Header() {
           : "border-b border-transparent bg-transparent py-4"
       }`}
     >
-      <div className="mx-auto flex max-w-7xl items-center justify-between gap-4 px-4 sm:px-6 lg:px-8">
-        <Link
-          href="/"
-          className="group flex items-center gap-2.5"
-          aria-label="LAPTECH home"
-        >
-          <span className="relative flex h-9 w-9 items-center justify-center rounded-md border border-accent/30 bg-accent/10">
-            <span className="text-sm font-bold tracking-tight text-accent">L</span>
-            <span className="absolute inset-0 rounded-md bg-accent/20 opacity-0 blur-md transition group-hover:opacity-100" />
-          </span>
-          <span className="font-display text-lg font-bold tracking-[0.08em] text-white">
-            LAPTECH
-          </span>
-        </Link>
+      <div className="mx-auto flex w-full max-w-[96rem] items-center gap-4 px-4 sm:px-6 lg:px-8">
+        <Logo size="lg" className="shrink-0" />
 
-        <nav className="hidden items-center gap-1 xl:flex" aria-label="Primary">
+        <nav
+          className="hidden items-center gap-1 border-l border-white/10 pl-5 xl:flex"
+          aria-label="Primary"
+        >
           {navItems.map((item) => {
             if (item.children) {
               return (
-                <div key={item.label} className="relative group">
+                <div key={item.label} className="relative group shrink-0">
                   <button
                     type="button"
-                    className="flex items-center gap-1 rounded-md px-3 py-2 text-sm font-medium text-slate-soft transition hover:text-white"
+                    className="flex items-center justify-center gap-1 whitespace-nowrap rounded-md px-2.5 py-2 text-base font-semibold text-slate-soft transition hover:text-white"
                     aria-expanded="false"
                   >
                     {item.label}
-                    <Icon name="chevron" className="h-3.5 w-3.5 opacity-60" />
+                    <Icon name="chevron" className="h-4 w-4 opacity-60" />
                   </button>
                   <div className="invisible absolute left-0 top-full z-50 w-72 pt-2 opacity-0 transition group-hover:visible group-hover:opacity-100">
                     <div className="rounded-lg border border-white/10 bg-navy-900/95 p-2 shadow-2xl backdrop-blur-xl">
@@ -100,7 +92,7 @@ export function Header() {
               <Link
                 key={item.href}
                 href={item.href}
-                className={`rounded-md px-3 py-2 text-sm font-medium transition ${
+                className={`shrink-0 whitespace-nowrap rounded-md px-2.5 py-2 text-center text-base font-semibold transition ${
                   active
                     ? "text-white"
                     : "text-slate-soft hover:text-white"
@@ -112,19 +104,30 @@ export function Header() {
           })}
         </nav>
 
-        <div className="hidden items-center gap-2 lg:flex">
-          <Button href="/contact" variant="secondary" size="sm">
+        <div className="ml-auto hidden shrink-0 items-center gap-2 xl:flex">
+          <Button
+            href={solutionsBrochure.href}
+            download={solutionsBrochure.filename}
+            variant="outline"
+            size="sm"
+            className="h-9 w-[7rem] justify-center px-2"
+          >
+            <Icon name="download" className="h-4 w-4" />
+            {solutionsBrochure.label}
+          </Button>
+          <Button
+            href="/contact"
+            size="sm"
+            className="h-9 w-[7rem] justify-center px-2"
+          >
             <Icon name="phone" className="h-4 w-4" />
             Call Us
-          </Button>
-          <Button href="/contact" size="sm">
-            Get a Free Consultation
           </Button>
         </div>
 
         <button
           type="button"
-          className="inline-flex h-10 w-10 items-center justify-center rounded-md border border-white/10 text-white xl:hidden"
+          className="ml-auto inline-flex h-10 w-10 shrink-0 items-center justify-center rounded-md border border-white/10 text-white xl:hidden"
           aria-label={open ? "Close menu" : "Open menu"}
           aria-expanded={open}
           onClick={() => setOpen((v) => !v)}
@@ -182,10 +185,17 @@ export function Header() {
               })}
             </nav>
             <div className="mt-4 flex flex-col gap-2 border-t border-white/8 pt-4">
-              <Button href="/contact" className="w-full">
-                Get a Free Consultation
+              <Button
+                href={solutionsBrochure.href}
+                download={solutionsBrochure.filename}
+                variant="outline"
+                className="w-full"
+              >
+                <Icon name="download" className="h-4 w-4" />
+                {solutionsBrochure.label}
               </Button>
-              <Button href="/contact" variant="secondary" className="w-full">
+              <Button href="/contact" className="w-full">
+                <Icon name="phone" className="h-4 w-4" />
                 Call Us — {siteConfig.contact.phone}
               </Button>
             </div>

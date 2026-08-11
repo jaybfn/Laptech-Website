@@ -3,22 +3,35 @@ import type { Metadata } from "next";
 export const siteConfig = {
   name: "LAPTECH",
   tagline: "Complete Technology Infrastructure. One Trusted Partner.",
-  heroHeadline: "Powering Businesses. Securing Spaces. Connecting Everything.",
+  heroHeadline: "Complete IT Infrastructure, Surveillance & Power Solutions",
   description:
     "LAPTECH delivers end-to-end IT infrastructure, surveillance, networking, power backup and security solutions for homes, businesses and enterprises.",
   url: "https://laptech.example.com",
   experience: "15+ Years",
   contact: {
-    phone: "[Phone Number]",
+    phone: "+91 7204906049",
     email: "[Email Address]",
-    whatsapp: "[WhatsApp Number]",
-    address: "[Office Address]",
+    whatsapp: "+91 7204906049",
+    address:
+      "No 36, Suprabha Complex, SRI Vasavi Temple Street, Vishweshwarapura, Basavanagudi, Bengaluru, Karnataka 560004",
+    // Use the Google Business listing query so the pin matches Maps (listing shows NO 35).
+    mapsUrl:
+      "https://www.google.com/maps/search/?api=1&query=LAPTECH%2C+NO+35%2C+Suprabha+Complex%2C+SRI%2C+Vasavi+Temple+St%2C+Vishweshwarapura%2C+Basavanagudi%2C+Bengaluru%2C+Karnataka+560004",
+    mapsEmbedUrl:
+      "https://maps.google.com/maps?q=LAPTECH%2C+NO+35%2C+Suprabha+Complex%2C+SRI%2C+Vasavi+Temple+St%2C+Vishweshwarapura%2C+Basavanagudi%2C+Bengaluru%2C+Karnataka+560004&z=17&output=embed",
   },
 };
 
 /** Toggle public sections without deleting code. Set true to re-enable later. */
 export const features = {
   showProjects: false,
+};
+
+/** Static brochure (screenshot PDF via `npm run pdf:solutions`) */
+export const solutionsBrochure = {
+  href: "/downloads/LAPTECH-Solutions.pdf",
+  label: "Download",
+  filename: "LAPTECH-Solutions.pdf",
 };
 
 export const defaultMetadata: Metadata = {

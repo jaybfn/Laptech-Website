@@ -12,10 +12,7 @@ export function Hero() {
 
       <div className="relative mx-auto grid max-w-7xl items-center gap-10 px-4 pb-16 pt-8 sm:px-6 lg:grid-cols-2 lg:gap-12 lg:px-8 lg:pb-24 lg:pt-12">
         <div>
-          <p className="mb-5 font-display text-sm font-bold uppercase tracking-[0.28em] text-accent">
-            LAPTECH
-          </p>
-          <h1 className="max-w-xl text-4xl font-bold leading-[1.08] tracking-tight text-white sm:text-5xl lg:text-[3.4rem]">
+          <h1 className="max-w-xl text-[2.125rem] font-bold leading-[1.08] tracking-tight text-white sm:text-[2.875rem] lg:text-[3.15rem]">
             {siteConfig.heroHeadline}
           </h1>
           <p className="mt-6 max-w-lg text-base leading-relaxed text-slate-soft sm:text-lg">

@@ -26,6 +26,16 @@ const organizationSchema = {
   description: siteConfig.description,
   url: siteConfig.url,
   slogan: siteConfig.tagline,
+  telephone: siteConfig.contact.phone,
+  address: {
+    "@type": "PostalAddress",
+    streetAddress:
+      "No 36, Suprabha Complex, SRI Vasavi Temple Street, Vishweshwarapura",
+    addressLocality: "Bengaluru",
+    addressRegion: "Karnataka",
+    postalCode: "560004",
+    addressCountry: "IN",
+  },
 };
 
 export default function RootLayout({

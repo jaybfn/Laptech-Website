@@ -32,6 +32,7 @@ type ButtonAsButton = CommonProps &
 
 type ButtonAsLink = CommonProps & {
   href: string;
+  download?: boolean | string;
   type?: never;
   disabled?: never;
 };
@@ -46,7 +47,34 @@ export function Button({
   const classes = `inline-flex items-center justify-center gap-2 rounded-md font-semibold tracking-tight transition-all duration-300 ${variants[variant]} ${sizes[size]} ${className}`;
 
   if ("href" in props && props.href) {
-    const { href, ...rest } = props;
+    const { href, download, ...rest } = props;
+    const isFile = href.endsWith(".pdf") || Boolean(download);
+    const isExternal =
+      href.startsWith("http") ||
+      href.startsWith("tel:") ||
+      href.startsWith("mailto:") ||
+      href.startsWith("https://wa.me");
+
+    if (isExternal || isFile) {
+      return (
+        <a
+          href={href}
+          className={classes}
+          download={
+            download === true
+              ? undefined
+              : download || (href.endsWith(".pdf") ? true : undefined)
+          }
+          {...(isExternal && href.startsWith("http")
+            ? { target: "_blank", rel: "noopener noreferrer" }
+            : {})}
+          {...rest}
+        >
+          {children}
+        </a>
+      );
+    }
+
     return (
       <Link href={href} className={classes} {...rest}>
         {children}
