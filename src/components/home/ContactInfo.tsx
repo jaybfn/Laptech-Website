@@ -9,8 +9,10 @@ function whatsappHref(value: string) {
 }
 
 export function ContactInfo({ compact = false }: { compact?: boolean }) {
-  const { whatsapp, address, mapsUrl, mapsEmbedUrl, phone } = siteConfig.contact;
+  const { whatsapp, address, mapsUrl, mapsEmbedUrl, phone, email } =
+    siteConfig.contact;
   const telHref = `tel:${phone.replace(/\s/g, "")}`;
+  const mailHref = `mailto:${email}`;
 
   return (
     <section className={compact ? "py-16" : "py-20 sm:py-28"} id="contact">
@@ -21,7 +23,7 @@ export function ContactInfo({ compact = false }: { compact?: boolean }) {
               Get in Touch
             </p>
             <h2 className="mt-3 max-w-2xl text-3xl font-bold tracking-tight text-white sm:text-4xl">
-              Reach us on WhatsApp or visit our office.
+              Reach us on WhatsApp, email, or visit our office.
             </h2>
             <p className="mt-4 max-w-xl text-base leading-relaxed text-slate-soft">
               Message us for a quick consultation, or stop by if you prefer to
@@ -35,7 +37,7 @@ export function ContactInfo({ compact = false }: { compact?: boolean }) {
                 </span>
                 <div>
                   <p className="text-xs font-semibold uppercase tracking-wider text-slate-muted">
-                    WhatsApp / Call
+                    WhatsApp / Call / Email
                   </p>
                   <a
                     href={whatsappHref(whatsapp)}
@@ -50,9 +52,15 @@ export function ContactInfo({ compact = false }: { compact?: boolean }) {
                   </p>
                   <a
                     href={telHref}
-                    className="mt-2 inline-block text-sm font-medium text-accent hover:underline"
+                    className="mt-2 block text-sm font-medium text-accent hover:underline"
                   >
-                    Or call {phone}
+                    Call {phone}
+                  </a>
+                  <a
+                    href={mailHref}
+                    className="mt-2 block text-sm font-medium text-accent hover:underline"
+                  >
+                    {email}
                   </a>
                 </div>
               </div>

@@ -27,6 +27,7 @@ const organizationSchema = {
   url: siteConfig.url,
   slogan: siteConfig.tagline,
   telephone: siteConfig.contact.phone,
+  email: siteConfig.contact.email,
   address: {
     "@type": "PostalAddress",
     streetAddress:

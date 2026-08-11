@@ -77,6 +77,15 @@ export function Footer() {
               </a>
             </li>
             <li className="flex items-start gap-2.5">
+              <Icon name="mail" className="mt-0.5 h-4 w-4 text-accent" />
+              <a
+                href={`mailto:${siteConfig.contact.email}`}
+                className="transition hover:text-accent"
+              >
+                {siteConfig.contact.email}
+              </a>
+            </li>
+            <li className="flex items-start gap-2.5">
               <Icon name="whatsapp" className="mt-0.5 h-4 w-4 text-accent" />
               <a
                 href={`https://wa.me/${siteConfig.contact.whatsapp.replace(/\D/g, "")}`}

@@ -10,7 +10,7 @@ export const siteConfig = {
   experience: "15+ Years",
   contact: {
     phone: "+91 7204906049",
-    email: "[Email Address]",
+    email: "laptech.techinfo@gmail.com",
     whatsapp: "+91 7204906049",
     address:
       "No 36, Suprabha Complex, SRI Vasavi Temple Street, Vishweshwarapura, Basavanagudi, Bengaluru, Karnataka 560004",
