@@ -25,7 +25,9 @@ export function BrandsCarousel() {
                 width={140}
                 height={48}
                 className="h-10 w-auto max-w-[9rem] object-contain"
-                loading="eager"
+                loading="lazy"
+                decoding="async"
+                fetchPriority="low"
               />
               <span className="text-[11px] font-medium tracking-wide text-navy-800">
                 {brand.name}

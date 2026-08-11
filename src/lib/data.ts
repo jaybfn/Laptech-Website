@@ -6,7 +6,9 @@ export const siteConfig = {
   heroHeadline: "Complete IT Infrastructure, Surveillance & Power Solutions",
   description:
     "LAPTECH delivers end-to-end IT infrastructure, surveillance, networking, power backup and security solutions for homes, businesses and enterprises.",
-  url: "https://laptech.example.com",
+  url:
+    process.env.NEXT_PUBLIC_SITE_URL?.replace(/\/$/, "") ||
+    "https://laptech-one.vercel.app",
   experience: "15+ Years",
   contact: {
     phone: "+91 7204906049",
@@ -28,7 +30,7 @@ export const features = {
   showLegal: false,
 };
 
-/** Fresh brochure PDF — regenerates from live /brochure/solutions on each download */
+/** Solutions brochure PDF — serves cached file; append ?regenerate=1 to rebuild locally */
 export const solutionsBrochure = {
   href: "/api/solutions-pdf",
   label: "Download",

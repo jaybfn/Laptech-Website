@@ -116,7 +116,7 @@ export function Header() {
             {solutionsBrochure.label}
           </Button>
           <Button
-            href="/contact"
+            href={`tel:${siteConfig.contact.phone.replace(/\s/g, "")}`}
             size="sm"
             className="h-9 w-[7rem] justify-center px-2"
           >
@@ -194,7 +194,10 @@ export function Header() {
                 <Icon name="download" className="h-4 w-4" />
                 {solutionsBrochure.label}
               </Button>
-              <Button href="/contact" className="w-full">
+              <Button
+                href={`tel:${siteConfig.contact.phone.replace(/\s/g, "")}`}
+                className="w-full"
+              >
                 <Icon name="phone" className="h-4 w-4" />
                 Call Us — {siteConfig.contact.phone}
               </Button>
