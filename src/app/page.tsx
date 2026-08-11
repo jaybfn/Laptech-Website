@@ -9,7 +9,7 @@ import { WhySection } from "@/components/home/WhySection";
 import { BrandsSection } from "@/components/home/BrandsSection";
 import { AmcCtaSection } from "@/components/home/AmcCtaSection";
 import { AboutPreview } from "@/components/home/AboutPreview";
-import { ContactSection } from "@/components/home/ContactSection";
+import { ContactInfo } from "@/components/home/ContactInfo";
 
 export const metadata: Metadata = {
   title: "LAPTECH | IT Infrastructure, Security & Power Solutions",
@@ -31,7 +31,7 @@ export default function HomePage() {
       <BrandsSection />
       <AboutPreview />
       <AmcCtaSection />
-      <ContactSection />
+      <ContactInfo />
     </>
   );
 }

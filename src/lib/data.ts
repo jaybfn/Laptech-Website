@@ -403,19 +403,6 @@ export const amcFeatures = [
   "System Health Checks",
 ];
 
-export const serviceOptions = [
-  "Laptop / Computer",
-  "CCTV",
-  "Networking",
-  "Power Backup",
-  "Fire Safety",
-  "Intercom / EPABX",
-  "Audio / PA System",
-  "AMC / Support",
-  "Complete Infrastructure",
-  "Other",
-];
-
 export const brandPlaceholders = [
   "Brand Logo",
   "Brand Logo",

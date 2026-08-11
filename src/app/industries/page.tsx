@@ -4,7 +4,7 @@ import { PageHero } from "@/components/ui/PageHero";
 import { Button } from "@/components/ui/Button";
 import { VisualPanel } from "@/components/ui/VisualPanel";
 import { Reveal } from "@/components/ui/Reveal";
-import { ContactSection } from "@/components/home/ContactSection";
+import { ContactInfo } from "@/components/home/ContactInfo";
 
 export const metadata: Metadata = {
   title: "Industries We Serve",
@@ -59,7 +59,7 @@ export default function IndustriesPage() {
         </div>
       </section>
 
-      <ContactSection compact />
+      <ContactInfo compact />
     </>
   );
 }

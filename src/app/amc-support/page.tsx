@@ -4,7 +4,7 @@ import { PageHero } from "@/components/ui/PageHero";
 import { Button } from "@/components/ui/Button";
 import { Reveal } from "@/components/ui/Reveal";
 import { Icon } from "@/components/ui/Icon";
-import { ContactSection } from "@/components/home/ContactSection";
+import { ContactInfo } from "@/components/home/ContactInfo";
 
 export const metadata: Metadata = {
   title: "AMC & Support",
@@ -75,7 +75,7 @@ export default function AmcSupportPage() {
         </div>
       </section>
 
-      <ContactSection compact />
+      <ContactInfo compact />
     </>
   );
 }

@@ -4,7 +4,7 @@ import { PageHero, DefaultPageCtas } from "@/components/ui/PageHero";
 import { Reveal } from "@/components/ui/Reveal";
 import { WhySection } from "@/components/home/WhySection";
 import { BrandsSection } from "@/components/home/BrandsSection";
-import { ContactSection } from "@/components/home/ContactSection";
+import { ContactInfo } from "@/components/home/ContactInfo";
 
 export const metadata: Metadata = {
   title: "About Us",
@@ -61,7 +61,7 @@ export default function AboutPage() {
 
       <WhySection />
       <BrandsSection />
-      <ContactSection compact />
+      <ContactInfo compact />
     </>
   );
 }
