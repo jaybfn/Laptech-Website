@@ -1,6 +1,7 @@
 import Image from "next/image";
 import { services, siteConfig, whyLaptech } from "@/lib/data";
 import { Icon, type IconName } from "@/components/ui/Icon";
+import { Logo } from "@/components/ui/Logo";
 
 const sheetClass =
   "pdf-sheet relative mx-auto flex w-[1100px] flex-col overflow-hidden bg-navy-950 text-white-soft";
@@ -18,18 +19,8 @@ export default function SolutionsBrochurePage() {
         className={sheetClass}
         style={sheetStyle}
       >
-        <div className="flex flex-col px-12 py-10">
-          <div className="flex items-center gap-3">
-            <span className="flex h-11 w-11 items-center justify-center rounded-md border border-accent/30 bg-accent/10 text-sm font-bold text-accent">
-              L
-            </span>
-            <div>
-              <p className="font-display text-xl font-bold tracking-[0.08em] text-white">
-                LAPTECH
-              </p>
-              <p className="text-xs text-slate-muted">{siteConfig.tagline}</p>
-            </div>
-          </div>
+          <div className="flex flex-col px-12 py-10">
+            <Logo href={false} size="lg" showTagline />
 
           <p className="mt-8 text-xs font-semibold uppercase tracking-[0.22em] text-accent">
             About Us
@@ -108,14 +99,7 @@ export default function SolutionsBrochurePage() {
         >
           <div className="flex flex-col px-12 py-9">
             <div className="flex items-center justify-between">
-              <div className="flex items-center gap-3">
-                <span className="flex h-9 w-9 items-center justify-center rounded-md border border-accent/30 bg-accent/10 text-sm font-bold text-accent">
-                  L
-                </span>
-                <p className="font-display text-base font-bold tracking-[0.08em] text-white">
-                  LAPTECH
-                </p>
-              </div>
+              <Logo href={false} size="md" />
               <p className="text-sm text-slate-muted">
                 Solution {String(index + 1).padStart(2, "0")} /{" "}
                 {String(services.length).padStart(2, "0")}
@@ -188,18 +172,8 @@ export default function SolutionsBrochurePage() {
         className={sheetClass}
         style={sheetStyle}
       >
-        <div className="flex flex-col px-12 py-10">
-          <div className="flex items-center gap-3">
-            <span className="flex h-11 w-11 items-center justify-center rounded-md border border-accent/30 bg-accent/10 text-sm font-bold text-accent">
-              L
-            </span>
-            <div>
-              <p className="font-display text-xl font-bold tracking-[0.08em] text-white">
-                LAPTECH
-              </p>
-              <p className="text-xs text-slate-muted">{siteConfig.tagline}</p>
-            </div>
-          </div>
+          <div className="flex flex-col px-12 py-10">
+            <Logo href={false} size="lg" showTagline />
 
           <p className="mt-8 text-xs font-semibold uppercase tracking-[0.22em] text-accent">
             Contact Info

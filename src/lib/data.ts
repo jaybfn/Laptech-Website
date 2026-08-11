@@ -27,9 +27,9 @@ export const features = {
   showProjects: false,
 };
 
-/** Static brochure (screenshot PDF via `npm run pdf:solutions`) */
+/** Fresh brochure PDF — regenerates from live /brochure/solutions on each download */
 export const solutionsBrochure = {
-  href: "/downloads/LAPTECH-Solutions.pdf",
+  href: "/api/solutions-pdf",
   label: "Download",
   filename: "LAPTECH-Solutions.pdf",
 };

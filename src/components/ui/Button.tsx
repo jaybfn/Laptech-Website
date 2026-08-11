@@ -48,7 +48,10 @@ export function Button({
 
   if ("href" in props && props.href) {
     const { href, download, ...rest } = props;
-    const isFile = href.endsWith(".pdf") || Boolean(download);
+    const isFile =
+      href.endsWith(".pdf") ||
+      href.startsWith("/api/solutions-pdf") ||
+      Boolean(download);
     const isExternal =
       href.startsWith("http") ||
       href.startsWith("tel:") ||
