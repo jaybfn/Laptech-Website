@@ -66,7 +66,8 @@ async function ensureFreshPdf(baseUrl: string) {
 
 function pdfResponse(bytes: Buffer, cacheable: boolean) {
   const etag = `"${crypto.createHash("sha1").update(bytes).digest("hex")}"`;
-  return new NextResponse(bytes, {
+  const body = new Uint8Array(bytes);
+  return new NextResponse(body, {
     status: 200,
     headers: {
       "Content-Type": "application/pdf",

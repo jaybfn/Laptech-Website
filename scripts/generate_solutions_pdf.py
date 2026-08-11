@@ -23,7 +23,7 @@ CONTACT = {
     "phone": "+91 7204906049",
     "whatsapp": "+91 7204906049",
     "address": (
-        "No 36, Suprabha Complex, SRI Vasavi Temple Street, "
+        "No 35, Suprabha Complex, SRI Vasavi Temple Street, "
         "Vishweshwarapura, Basavanagudi, Bengaluru, Karnataka 560004"
     ),
 }

@@ -31,7 +31,7 @@ const organizationSchema = {
   address: {
     "@type": "PostalAddress",
     streetAddress:
-      "No 36, Suprabha Complex, SRI Vasavi Temple Street, Vishweshwarapura",
+      "No 35, Suprabha Complex, SRI Vasavi Temple Street, Vishweshwarapura",
     addressLocality: "Bengaluru",
     addressRegion: "Karnataka",
     postalCode: "560004",

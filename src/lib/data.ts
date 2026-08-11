@@ -15,8 +15,8 @@ export const siteConfig = {
     email: "laptech.techinfo@gmail.com",
     whatsapp: "+91 7204906049",
     address:
-      "No 36, Suprabha Complex, SRI Vasavi Temple Street, Vishweshwarapura, Basavanagudi, Bengaluru, Karnataka 560004",
-    // Use the Google Business listing query so the pin matches Maps (listing shows NO 35).
+      "No 35, Suprabha Complex, SRI Vasavi Temple Street, Vishweshwarapura, Basavanagudi, Bengaluru, Karnataka 560004",
+    // Matches Google Business listing pin (NO 35).
     mapsUrl:
       "https://www.google.com/maps/search/?api=1&query=LAPTECH%2C+NO+35%2C+Suprabha+Complex%2C+SRI%2C+Vasavi+Temple+St%2C+Vishweshwarapura%2C+Basavanagudi%2C+Bengaluru%2C+Karnataka+560004",
     mapsEmbedUrl:
