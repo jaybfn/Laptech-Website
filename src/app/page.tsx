@@ -10,6 +10,7 @@ import { BrandsSection } from "@/components/home/BrandsSection";
 import { AmcCtaSection } from "@/components/home/AmcCtaSection";
 import { AboutPreview } from "@/components/home/AboutPreview";
 import { ContactInfo } from "@/components/home/ContactInfo";
+import { features } from "@/lib/data";
 
 export const metadata: Metadata = {
   title: "LAPTECH | IT Infrastructure, Security & Power Solutions",
@@ -26,7 +27,7 @@ export default function HomePage() {
       <ServicesSection />
       <EcosystemSection />
       <IndustriesSection limit={6} />
-      <ProjectsSection limit={3} />
+      {features.showProjects ? <ProjectsSection limit={3} /> : null}
       <WhySection />
       <BrandsSection />
       <AboutPreview />

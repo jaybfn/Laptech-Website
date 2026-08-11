@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
-import { projects } from "@/lib/data";
+import { notFound } from "next/navigation";
+import { projects, features } from "@/lib/data";
 import { PageHero } from "@/components/ui/PageHero";
 import { Button } from "@/components/ui/Button";
 import { VisualPanel } from "@/components/ui/VisualPanel";
@@ -11,9 +12,16 @@ export const metadata: Metadata = {
   description:
     "Explore representative LAPTECH project deployments across corporate, hospitality, retail, education and industrial environments.",
   alternates: { canonical: "/projects" },
+  robots: features.showProjects
+    ? { index: true, follow: true }
+    : { index: false, follow: false },
 };
 
 export default function ProjectsPage() {
+  if (!features.showProjects) {
+    notFound();
+  }
+
   return (
     <>
       <PageHero

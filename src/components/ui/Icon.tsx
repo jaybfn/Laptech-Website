@@ -43,6 +43,38 @@ const icons = {
       <path d="M18.5 7a6.5 6.5 0 0 1 0 10" strokeLinecap="round" />
     </svg>
   ),
+  epabx: (
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" aria-hidden>
+      <rect x="4" y="3" width="16" height="18" rx="2" />
+      <rect x="7" y="6" width="10" height="5" rx="0.5" />
+      <circle cx="8.5" cy="15" r="1" />
+      <circle cx="12" cy="15" r="1" />
+      <circle cx="15.5" cy="15" r="1" />
+      <circle cx="8.5" cy="18" r="1" />
+      <circle cx="12" cy="18" r="1" />
+      <circle cx="15.5" cy="18" r="1" />
+    </svg>
+  ),
+  biometrics: (
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" aria-hidden>
+      <path d="M12 3a6 6 0 0 0-6 6v1" strokeLinecap="round" />
+      <path d="M12 3a6 6 0 0 1 6 6v1" strokeLinecap="round" />
+      <path d="M8 10c0 5 1.5 8 4 11" strokeLinecap="round" />
+      <path d="M16 10c0 5-1.5 8-4 11" strokeLinecap="round" />
+      <path d="M12 10v11" strokeLinecap="round" />
+      <path d="M10 12.5c.5 3 1.2 5 2 7.5" strokeLinecap="round" opacity="0.6" />
+      <path d="M14 12.5c-.5 3-1.2 5-2 7.5" strokeLinecap="round" opacity="0.6" />
+    </svg>
+  ),
+  vdp: (
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" aria-hidden>
+      <rect x="3" y="4" width="10" height="16" rx="1.5" />
+      <rect x="5" y="6.5" width="6" height="5" rx="0.5" />
+      <circle cx="8" cy="15.5" r="1.5" />
+      <rect x="15" y="7" width="6" height="10" rx="1" />
+      <path d="M17 10h2M17 12.5h2" strokeLinecap="round" opacity="0.6" />
+    </svg>
+  ),
   experience: (
     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" aria-hidden>
       <circle cx="12" cy="12" r="9" />

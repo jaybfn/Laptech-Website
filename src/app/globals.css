@@ -158,6 +158,31 @@
   animation: float-soft 6s ease-in-out infinite;
 }
 
+/* Brands logo carousel */
+@keyframes brands-marquee {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+.brands-marquee {
+  animation: brands-marquee 55s linear infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .brands-marquee {
+    animation: none;
+    flex-wrap: wrap;
+    width: 100% !important;
+    max-width: 72rem;
+    margin-inline: auto;
+    justify-content: center;
+  }
+}
+
 /* Focus styles */
 :focus-visible {
   outline: 2px solid var(--color-accent);

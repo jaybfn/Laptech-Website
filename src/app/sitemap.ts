@@ -1,5 +1,5 @@
 import type { MetadataRoute } from "next";
-import { siteConfig } from "@/lib/data";
+import { siteConfig, features } from "@/lib/data";
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const routes = [
@@ -8,12 +8,15 @@ export default function sitemap(): MetadataRoute.Sitemap {
     "/services",
     "/solutions/it-hardware",
     "/solutions/cctv-security",
+    "/solutions/biometrics-access-control",
+    "/solutions/video-door-phone",
     "/solutions/networking",
     "/solutions/power-backup",
     "/solutions/fire-safety",
-    "/solutions/intercom-audio",
+    "/solutions/epabx-intercom",
+    "/solutions/commercial-audio-pa",
     "/industries",
-    "/projects",
+    ...(features.showProjects ? ["/projects"] : []),
     "/amc-support",
     "/contact",
   ];

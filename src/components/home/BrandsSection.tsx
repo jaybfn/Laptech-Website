@@ -1,6 +1,6 @@
-import { brandPlaceholders } from "@/lib/data";
 import { SectionHeading } from "@/components/ui/SectionHeading";
 import { Reveal } from "@/components/ui/Reveal";
+import { BrandsCarousel } from "@/components/home/BrandsCarousel";
 
 export function BrandsSection() {
   return (
@@ -11,22 +11,12 @@ export function BrandsSection() {
             align="center"
             eyebrow="Brands"
             title="Technology From Brands You Trust"
-            description="Partner brand logos will appear here once confirmed. Placeholders only — no invented partnerships."
+            description="We source and deploy technology from leading global and trusted brands across IT, security, networking, power and peripherals."
           />
         </Reveal>
 
-        <Reveal delay={2} className="mt-10 grid grid-cols-2 gap-3 sm:grid-cols-3 lg:grid-cols-6">
-          {brandPlaceholders.map((label, i) => (
-            <div
-              key={`${label}-${i}`}
-              className="flex h-20 items-center justify-center border border-white/8 bg-white/[0.02] grayscale"
-            >
-              <span className="text-xs font-medium uppercase tracking-[0.18em] text-slate-muted">
-                [{label}]
-              </span>
-            </div>
-          ))}
-        </Reveal>
+        {/* Keep carousel outside Reveal so logos are always visible */}
+        <BrandsCarousel />
       </div>
     </section>
   );

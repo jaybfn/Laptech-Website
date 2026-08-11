@@ -1,8 +1,8 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import { industries } from "@/lib/data";
 import { PageHero } from "@/components/ui/PageHero";
 import { Button } from "@/components/ui/Button";
-import { VisualPanel } from "@/components/ui/VisualPanel";
 import { Reveal } from "@/components/ui/Reveal";
 import { ContactInfo } from "@/components/home/ContactInfo";
 
@@ -41,11 +41,16 @@ export default function IndustriesPage() {
               delay={(Math.min((i % 3) + 1, 4) as 1 | 2 | 3 | 4)}
               className="overflow-hidden border border-white/8 bg-navy-900/30"
             >
-              <VisualPanel
-                variant={industry.image}
-                label={industry.title}
-                className="h-44"
-              />
+              <div className="relative h-48 overflow-hidden">
+                <Image
+                  src={industry.image}
+                  alt={industry.imageAlt}
+                  fill
+                  sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                  className="object-cover"
+                />
+                <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-navy-950/50 via-transparent to-navy-950/10" />
+              </div>
               <div className="p-6">
                 <h2 className="text-xl font-semibold text-white">
                   {industry.title}

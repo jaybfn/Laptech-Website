@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { siteConfig, services } from "@/lib/data";
+import { siteConfig, services, features } from "@/lib/data";
 import { Icon } from "@/components/ui/Icon";
 
 const companyLinks = [
@@ -11,6 +11,9 @@ const companyLinks = [
 ];
 
 export function Footer() {
+  const links = companyLinks.filter(
+    (link) => features.showProjects || link.href !== "/projects"
+  );
   return (
     <footer className="border-t border-white/8 bg-navy-950">
       <div className="mx-auto grid max-w-7xl gap-10 px-4 py-16 sm:px-6 lg:grid-cols-4 lg:px-8">
@@ -52,7 +55,7 @@ export function Footer() {
             Company
           </h3>
           <ul className="mt-4 space-y-2.5">
-            {companyLinks.map((link) => (
+            {links.map((link) => (
               <li key={link.href}>
                 <Link
                   href={link.href}

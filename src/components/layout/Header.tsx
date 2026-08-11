@@ -3,7 +3,7 @@
 import Link from "next/link";
 import { useEffect, useState } from "react";
 import { usePathname } from "next/navigation";
-import { mainNav, siteConfig } from "@/lib/data";
+import { mainNav, siteConfig, features } from "@/lib/data";
 import { Button } from "@/components/ui/Button";
 import { Icon } from "@/components/ui/Icon";
 
@@ -12,6 +12,9 @@ export function Header() {
   const [scrolled, setScrolled] = useState(false);
   const [open, setOpen] = useState(false);
   const [solutionsOpen, setSolutionsOpen] = useState(false);
+  const navItems = mainNav.filter(
+    (item) => features.showProjects || item.href !== "/projects"
+  );
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 24);
@@ -56,7 +59,7 @@ export function Header() {
         </Link>
 
         <nav className="hidden items-center gap-1 xl:flex" aria-label="Primary">
-          {mainNav.map((item) => {
+          {navItems.map((item) => {
             if (item.children) {
               return (
                 <div key={item.label} className="relative group">
@@ -134,7 +137,7 @@ export function Header() {
         <div className="border-t border-white/8 bg-navy-950/98 backdrop-blur-xl xl:hidden">
           <div className="mx-auto max-h-[calc(100vh-4.5rem)] max-w-7xl overflow-y-auto px-4 py-4 sm:px-6">
             <nav className="flex flex-col gap-1" aria-label="Mobile">
-              {mainNav.map((item) => {
+              {navItems.map((item) => {
                 if (item.children) {
                   return (
                     <div key={item.label}>

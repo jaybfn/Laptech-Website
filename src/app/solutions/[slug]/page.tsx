@@ -1,12 +1,12 @@
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { services } from "@/lib/data";
-import { PageHero } from "@/components/ui/PageHero";
 import { Button } from "@/components/ui/Button";
 import { Reveal } from "@/components/ui/Reveal";
 import { Icon, type IconName } from "@/components/ui/Icon";
 import { ContactInfo } from "@/components/home/ContactInfo";
 import { AmcCtaSection } from "@/components/home/AmcCtaSection";
+import { SolutionHero } from "@/components/solutions/SolutionHero";
 
 type SolutionPageProps = {
   params: Promise<{ slug: string }>;
@@ -15,10 +15,15 @@ type SolutionPageProps = {
 const slugMap: Record<string, string> = {
   "it-hardware": "it-hardware",
   "cctv-security": "cctv",
+  "biometrics-access-control": "biometrics",
+  "biometrics-vdp": "biometrics", // legacy URL
+  "video-door-phone": "vdp",
   networking: "networking",
   "power-backup": "power",
   "fire-safety": "fire",
-  "intercom-audio": "intercom",
+  "epabx-intercom": "epabx",
+  "commercial-audio-pa": "audio-pa",
+  "intercom-audio": "audio-pa", // legacy URL
 };
 
 export function generateStaticParams() {
@@ -36,6 +41,11 @@ export async function generateMetadata({
     title: service.title,
     description: service.description,
     alternates: { canonical: `/solutions/${slug}` },
+    openGraph: {
+      title: service.title,
+      description: service.description,
+      images: [{ url: service.image, alt: service.imageAlt }],
+    },
   };
 }
 
@@ -46,10 +56,11 @@ export default async function SolutionPage({ params }: SolutionPageProps) {
 
   return (
     <>
-      <PageHero
-        eyebrow="Solutions"
+      <SolutionHero
         title={service.title}
         description={service.description}
+        imageSrc={service.image}
+        imageAlt={service.imageAlt}
         actions={
           <>
             <Button href="/contact" size="lg">
