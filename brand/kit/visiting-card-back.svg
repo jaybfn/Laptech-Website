@@ -1,0 +1,47 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1050 600" role="img" aria-label="LAPTECH visiting card back">
+  <title>LAPTECH Visiting Card  Back</title>
+  <defs>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Manrope:wght@600;700;800&amp;family=Plus+Jakarta+Sans:wght@400;500;600&amp;display=swap');
+      .d { font-family: Manrope, Arial, sans-serif; }
+      .b { font-family: 'Plus Jakarta Sans', Arial, sans-serif; }
+    </style>
+    <linearGradient id="vb-page" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#0f1f3d"/>
+      <stop offset="100%" stop-color="#0a1528"/>
+    </linearGradient>
+    <linearGradient id="vb-tech" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#14adc4"/><stop offset="100%" stop-color="#febe3b"/>
+    </linearGradient>
+    <linearGradient id="vb-bar" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#14adc4"/><stop offset="100%" stop-color="#febe3b"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="1050" height="600" rx="18" fill="url(#vb-page)"/>
+  <rect x="1038" y="0" width="12" height="600" fill="url(#vb-bar)"/>
+
+  <!-- Left: person placeholder -->
+  <text class="d" x="72" y="160" fill="#ffffff" font-size="36" font-weight="800">Your Name</text>
+  <text class="b" x="72" y="200" fill="#14adc4" font-size="18" font-weight="600">Director / Sales</text>
+  <rect x="72" y="230" width="80" height="3" rx="1.5" fill="url(#vb-tech)"/>
+
+  <text class="b" x="72" y="300" fill="#e8eef4" font-size="18">+91 7204906049</text>
+  <text class="b" x="72" y="340" fill="#e8eef4" font-size="18">laptech.techinfo@gmail.com</text>
+  <text class="b" x="72" y="400" fill="#a8b8cc" font-size="15">No 36, Suprabha Complex,</text>
+  <text class="b" x="72" y="426" fill="#a8b8cc" font-size="15">SRI Vasavi Temple Street,</text>
+  <text class="b" x="72" y="452" fill="#a8b8cc" font-size="15">Basavanagudi, Bengaluru 560004</text>
+
+  <!-- Right brand column -->
+  <rect x="620" y="40" width="380" height="520" rx="12" fill="#162d53" fill-opacity="0.55"/>
+  <text class="d" x="810" y="160" text-anchor="middle" font-size="32" font-weight="800" letter-spacing="0.12em">
+    <tspan fill="#ffffff">LAP</tspan><tspan fill="url(#vb-tech)">TECH</tspan>
+  </text>
+  <text class="b" x="810" y="210" text-anchor="middle" fill="#a8b8cc" font-size="14">IT Hardware</text>
+  <text class="b" x="810" y="240" text-anchor="middle" fill="#a8b8cc" font-size="14">CCTV &amp; Security</text>
+  <text class="b" x="810" y="270" text-anchor="middle" fill="#a8b8cc" font-size="14">Networking</text>
+  <text class="b" x="810" y="300" text-anchor="middle" fill="#a8b8cc" font-size="14">Power Backup</text>
+  <text class="b" x="810" y="330" text-anchor="middle" fill="#a8b8cc" font-size="14">Biometrics · Fire · Audio</text>
+  <text class="d" x="810" y="420" text-anchor="middle" fill="#7a8da3" font-size="12" font-weight="600" letter-spacing="0.16em">15+ YEARS</text>
+  <text class="b" x="810" y="480" text-anchor="middle" fill="#febe3b" font-size="14" font-weight="600">One Trusted Partner</text>
+</svg>

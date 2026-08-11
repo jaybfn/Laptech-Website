@@ -1,0 +1,68 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 794 1123" role="img" aria-label="LAPTECH letterhead dark">
+  <title>LAPTECH Letterhead  Dark</title>
+  <defs>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Manrope:wght@600;700;800&amp;family=Plus+Jakarta+Sans:wght@400;500;600&amp;display=swap');
+      .d { font-family: Manrope, Arial, sans-serif; }
+      .b { font-family: 'Plus Jakarta Sans', Arial, sans-serif; }
+    </style>
+    <linearGradient id="lh-bg" x1="8" y1="4" x2="42" y2="46" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#16365f"/><stop offset="1" stop-color="#0a1528"/>
+    </linearGradient>
+    <linearGradient id="lh-l" x1="14" y1="10" x2="34" y2="38" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#14adc4"/><stop offset="0.55" stop-color="#0090a5"/><stop offset="1" stop-color="#febe3b"/>
+    </linearGradient>
+    <linearGradient id="lh-ring" x1="10" y1="8" x2="40" y2="40" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#14adc4" stop-opacity="0.9"/><stop offset="1" stop-color="#febe3b" stop-opacity="0.75"/>
+    </linearGradient>
+    <linearGradient id="lh-tech" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#14adc4"/><stop offset="100%" stop-color="#febe3b"/>
+    </linearGradient>
+    <linearGradient id="lh-rule" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#14adc4"/><stop offset="100%" stop-color="#febe3b"/>
+    </linearGradient>
+    <linearGradient id="pageGrad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#0a1528"/><stop offset="100%" stop-color="#0f1f3d"/>
+    </linearGradient>
+  </defs>
+
+  <!-- A4 page -->
+  <rect width="794" height="1123" fill="url(#pageGrad)"/>
+  <circle cx="700" cy="80" r="180" fill="#0090a5" fill-opacity="0.06"/>
+  <circle cx="60" cy="1000" r="220" fill="#febe3b" fill-opacity="0.04"/>
+
+  <!-- Header -->
+  <g transform="translate(56,48)">
+    <g transform="scale(1.15)">
+      <path d="M24 3.5 41 11.2v12.4c0 9.2-7.1 17.5-17 20.4C14.1 41.1 7 32.8 7 23.6V11.2L24 3.5Z" fill="url(#lh-bg)"/>
+      <path d="M24 3.5 41 11.2v12.4c0 9.2-7.1 17.5-17 20.4C14.1 41.1 7 32.8 7 23.6V11.2L24 3.5Z" stroke="url(#lh-ring)" stroke-width="1.4"/>
+      <path d="M18.5 15.5v14.2h11.2" stroke="url(#lh-l)" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"/>
+      <circle cx="18.5" cy="15.5" r="2.1" fill="#febe3b"/>
+      <circle cx="18.5" cy="29.7" r="2.1" fill="#14adc4"/>
+      <circle cx="29.7" cy="29.7" r="2.1" fill="#febe3b"/>
+    </g>
+    <text class="d" x="68" y="34" font-size="28" font-weight="800" letter-spacing="0.14em">
+      <tspan fill="#ffffff">LAP</tspan><tspan fill="url(#lh-tech)">TECH</tspan>
+    </text>
+    <text class="d" x="68" y="52" fill="#7a8da3" font-size="9" font-weight="600" letter-spacing="0.2em">INFRASTRUCTURE · SECURITY · POWER</text>
+  </g>
+
+  <text class="b" x="520" y="68" fill="#a8b8cc" font-size="11" text-anchor="end">+91 7204906049</text>
+  <text class="b" x="520" y="86" fill="#a8b8cc" font-size="11" text-anchor="end">laptech.techinfo@gmail.com</text>
+  <text class="b" x="738" y="68" fill="#14adc4" font-size="11" text-anchor="end" font-weight="600">Bengaluru</text>
+  <text class="b" x="738" y="86" fill="#7a8da3" font-size="10" text-anchor="end">Karnataka 560004</text>
+
+  <rect x="56" y="120" width="682" height="3" rx="1.5" fill="url(#lh-rule)"/>
+
+  <!-- Content guides (subtle) -->
+  <text class="b" x="56" y="190" fill="#7a8da3" font-size="12" opacity="0.45">Date</text>
+  <text class="b" x="56" y="240" fill="#7a8da3" font-size="12" opacity="0.45">Recipient</text>
+  <rect x="56" y="280" width="682" height="680" fill="none" stroke="#ffffff" stroke-opacity="0.04" stroke-dasharray="6 6" rx="4"/>
+  <text class="b" x="397" y="620" fill="#7a8da3" font-size="13" text-anchor="middle" opacity="0.35">Letter content area</text>
+
+  <!-- Footer -->
+  <rect x="56" y="1020" width="682" height="1.5" fill="url(#lh-rule)" opacity="0.7"/>
+  <text class="b" x="56" y="1050" fill="#7a8da3" font-size="10">No 36, Suprabha Complex, SRI Vasavi Temple Street,</text>
+  <text class="b" x="56" y="1066" fill="#7a8da3" font-size="10">Vishweshwarapura, Basavanagudi, Bengaluru, Karnataka 560004</text>
+  <text class="d" x="738" y="1058" fill="#a8b8cc" font-size="10" text-anchor="end" font-weight="600" letter-spacing="0.08em">COMPLETE TECHNOLOGY INFRASTRUCTURE</text>
+</svg>

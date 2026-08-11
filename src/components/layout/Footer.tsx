@@ -8,6 +8,7 @@ const companyLinks = [
   { label: "Industries", href: "/industries" },
   { label: "Projects", href: "/projects" },
   { label: "AMC & Support", href: "/amc-support" },
+  { label: "Brand Kit", href: "/brand-kit" },
   { label: "Contact", href: "/contact" },
 ];
 

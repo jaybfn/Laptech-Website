@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 360" role="img" aria-label="LAPTECH typography">
+  <title>LAPTECH Typography</title>
+  <defs>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Manrope:wght@600;700;800&amp;family=Plus+Jakarta+Sans:wght@400;500;600&amp;display=swap');
+      .display { font-family: Manrope, Arial, sans-serif; }
+      .body { font-family: 'Plus Jakarta Sans', Arial, sans-serif; }
+    </style>
+    <linearGradient id="tech" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#14adc4"/>
+      <stop offset="100%" stop-color="#febe3b"/>
+    </linearGradient>
+  </defs>
+  <rect width="640" height="360" fill="#0a1528"/>
+  <text class="display" x="40" y="48" fill="#ffffff" font-size="22" font-weight="800" letter-spacing="0.1em">TYPOGRAPHY</text>
+
+  <text class="display" x="40" y="110" fill="#14adc4" font-size="12" font-weight="700" letter-spacing="0.2em">DISPLAY  MANROPE</text>
+  <text class="display" x="40" y="158" fill="#ffffff" font-size="42" font-weight="800" letter-spacing="-0.02em">Headlines &amp; Brand</text>
+  <text class="display" x="40" y="198" fill="#a8b8cc" font-size="14">Weights 600800 · Tracking 0.02em · Wordmark 0.14em</text>
+
+  <text class="body" x="40" y="250" fill="#14adc4" font-size="12" font-weight="600" letter-spacing="0.2em">BODY  PLUS JAKARTA SANS</text>
+  <text class="body" x="40" y="290" fill="#e8eef4" font-size="20" font-weight="500">UI, paragraphs, and supporting copy.</text>
+  <text class="body" x="40" y="322" fill="#7a8da3" font-size="13">Weights 400600 · Comfortable reading on navy</text>
+</svg>

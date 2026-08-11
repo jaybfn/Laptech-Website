@@ -1,0 +1,105 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 720" role="img" aria-label="LAPTECH color palette">
+  <title>LAPTECH Color Palette</title>
+  <defs>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Manrope:wght@600;700;800&amp;family=Plus+Jakarta+Sans:wght@400;500;600&amp;display=swap');
+      .display { font-family: Manrope, Arial, sans-serif; }
+      .body { font-family: 'Plus Jakarta Sans', Arial, sans-serif; }
+    </style>
+  </defs>
+  <rect width="1200" height="720" fill="#0a1528"/>
+  <text class="display" x="64" y="72" fill="#ffffff" font-size="36" font-weight="800" letter-spacing="0.08em">LAPTECH COLOR SYSTEM</text>
+  <text class="body" x="64" y="108" fill="#a8b8cc" font-size="16">Primary · Accent · Supporting  from the website design tokens</text>
+
+  <!-- Primary navy -->
+  <g transform="translate(64,160)">
+    <rect width="200" height="140" rx="8" fill="#0a1528" stroke="#ffffff" stroke-opacity="0.12"/>
+    <text class="body" x="16" y="36" fill="#ffffff" font-size="14" font-weight="600">Navy 950</text>
+    <text class="body" x="16" y="58" fill="#a8b8cc" font-size="13">#0A1528</text>
+    <text class="body" x="16" y="118" fill="#7a8da3" font-size="12">Background / base</text>
+  </g>
+  <g transform="translate(284,160)">
+    <rect width="200" height="140" rx="8" fill="#0f1f3d"/>
+    <text class="body" x="16" y="36" fill="#ffffff" font-size="14" font-weight="600">Navy 900</text>
+    <text class="body" x="16" y="58" fill="#a8b8cc" font-size="13">#0F1F3D</text>
+    <text class="body" x="16" y="118" fill="#7a8da3" font-size="12">Surfaces</text>
+  </g>
+  <g transform="translate(504,160)">
+    <rect width="200" height="140" rx="8" fill="#162d53"/>
+    <text class="body" x="16" y="36" fill="#ffffff" font-size="14" font-weight="600">Navy 800</text>
+    <text class="body" x="16" y="58" fill="#a8b8cc" font-size="13">#162D53</text>
+    <text class="body" x="16" y="118" fill="#7a8da3" font-size="12">Panels / glass</text>
+  </g>
+  <g transform="translate(724,160)">
+    <rect width="200" height="140" rx="8" fill="#1c3866"/>
+    <text class="body" x="16" y="36" fill="#ffffff" font-size="14" font-weight="600">Navy 700</text>
+    <text class="body" x="16" y="58" fill="#a8b8cc" font-size="13">#1C3866</text>
+    <text class="body" x="16" y="118" fill="#7a8da3" font-size="12">Elevated UI</text>
+  </g>
+  <g transform="translate(944,160)">
+    <rect width="192" height="140" rx="8" fill="#25487a"/>
+    <text class="body" x="16" y="36" fill="#ffffff" font-size="14" font-weight="600">Navy 600</text>
+    <text class="body" x="16" y="58" fill="#a8b8cc" font-size="13">#25487A</text>
+    <text class="body" x="16" y="118" fill="#7a8da3" font-size="12">Highlights</text>
+  </g>
+
+  <!-- Accents -->
+  <g transform="translate(64,340)">
+    <rect width="250" height="140" rx="8" fill="#0090a5"/>
+    <text class="body" x="16" y="36" fill="#ffffff" font-size="14" font-weight="600">Accent</text>
+    <text class="body" x="16" y="58" fill="#e8eef4" font-size="13">#0090A5</text>
+    <text class="body" x="16" y="118" fill="#cce9ed" font-size="12">Links · focus · CTAs</text>
+  </g>
+  <g transform="translate(334,340)">
+    <rect width="250" height="140" rx="8" fill="#14adc4"/>
+    <text class="body" x="16" y="36" fill="#0a1528" font-size="14" font-weight="600">Accent Bright</text>
+    <text class="body" x="16" y="58" fill="#0a1528" font-size="13">#14ADC4</text>
+    <text class="body" x="16" y="118" fill="#0f1f3d" font-size="12">Logo gradient start</text>
+  </g>
+  <g transform="translate(604,340)">
+    <rect width="250" height="140" rx="8" fill="#febe3b"/>
+    <text class="body" x="16" y="36" fill="#0a1528" font-size="14" font-weight="600">Gold</text>
+    <text class="body" x="16" y="58" fill="#0a1528" font-size="13">#FEBE3B</text>
+    <text class="body" x="16" y="118" fill="#0f1f3d" font-size="12">Primary CTA · energy</text>
+  </g>
+  <g transform="translate(874,340)">
+    <rect width="262" height="140" rx="8" fill="#ffcf66"/>
+    <text class="body" x="16" y="36" fill="#0a1528" font-size="14" font-weight="600">Gold Bright</text>
+    <text class="body" x="16" y="58" fill="#0a1528" font-size="13">#FFCF66</text>
+    <text class="body" x="16" y="118" fill="#0f1f3d" font-size="12">Hover / emphasis</text>
+  </g>
+
+  <!-- Neutrals + gradient -->
+  <g transform="translate(64,520)">
+    <rect width="170" height="120" rx="8" fill="#f5f7f8"/>
+    <text class="body" x="14" y="34" fill="#0a1528" font-size="13" font-weight="600">Off White</text>
+    <text class="body" x="14" y="56" fill="#162d53" font-size="12">#F5F7F8</text>
+  </g>
+  <g transform="translate(254,520)">
+    <rect width="170" height="120" rx="8" fill="#e8eef4"/>
+    <text class="body" x="14" y="34" fill="#0a1528" font-size="13" font-weight="600">White Soft</text>
+    <text class="body" x="14" y="56" fill="#162d53" font-size="12">#E8EEF4</text>
+  </g>
+  <g transform="translate(444,520)">
+    <rect width="170" height="120" rx="8" fill="#a8b8cc"/>
+    <text class="body" x="14" y="34" fill="#0a1528" font-size="13" font-weight="600">Slate Soft</text>
+    <text class="body" x="14" y="56" fill="#0a1528" font-size="12">#A8B8CC</text>
+  </g>
+  <g transform="translate(634,520)">
+    <rect width="170" height="120" rx="8" fill="#7a8da3"/>
+    <text class="body" x="14" y="34" fill="#ffffff" font-size="13" font-weight="600">Slate Muted</text>
+    <text class="body" x="14" y="56" fill="#e8eef4" font-size="12">#7A8DA3</text>
+  </g>
+  <g transform="translate(824,520)">
+    <defs>
+      <linearGradient id="brandGrad" x1="0" y1="0" x2="1" y2="0">
+        <stop offset="0%" stop-color="#14adc4"/>
+        <stop offset="100%" stop-color="#febe3b"/>
+      </linearGradient>
+    </defs>
+    <rect width="312" height="120" rx="8" fill="url(#brandGrad)"/>
+    <text class="body" x="16" y="34" fill="#0a1528" font-size="13" font-weight="600">Brand Gradient</text>
+    <text class="body" x="16" y="56" fill="#0a1528" font-size="12">#14ADC4 ’ #FEBE3B</text>
+    <text class="body" x="16" y="96" fill="#0f1f3d" font-size="12">Wordmark TECH · logo stroke</text>
+  </g>
+</svg>

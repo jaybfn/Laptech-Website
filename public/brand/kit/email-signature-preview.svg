@@ -1,0 +1,34 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 200" role="img" aria-label="LAPTECH email signature preview">
+  <title>LAPTECH Email Signature Preview</title>
+  <defs>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Manrope:wght@600;700;800&amp;family=Plus+Jakarta+Sans:wght@400;500;600&amp;display=swap');
+      .d { font-family: Manrope, Arial, sans-serif; }
+      .b { font-family: 'Plus Jakarta Sans', Arial, sans-serif; }
+    </style>
+    <linearGradient id="es-bg" x1="8" y1="4" x2="42" y2="46" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#16365f"/><stop offset="1" stop-color="#0a1528"/>
+    </linearGradient>
+    <linearGradient id="es-l" x1="14" y1="10" x2="34" y2="38" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#14adc4"/><stop offset="0.55" stop-color="#0090a5"/><stop offset="1" stop-color="#febe3b"/>
+    </linearGradient>
+    <linearGradient id="es-ring" x1="10" y1="8" x2="40" y2="40" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#14adc4" stop-opacity="0.9"/><stop offset="1" stop-color="#febe3b" stop-opacity="0.75"/>
+    </linearGradient>
+  </defs>
+  <rect width="600" height="200" fill="#ffffff" rx="8"/>
+  <g transform="translate(24,56) scale(1.5)">
+    <path d="M24 3.5 41 11.2v12.4c0 9.2-7.1 17.5-17 20.4C14.1 41.1 7 32.8 7 23.6V11.2L24 3.5Z" fill="url(#es-bg)"/>
+    <path d="M24 3.5 41 11.2v12.4c0 9.2-7.1 17.5-17 20.4C14.1 41.1 7 32.8 7 23.6V11.2L24 3.5Z" stroke="url(#es-ring)" stroke-width="1.4"/>
+    <path d="M18.5 15.5v14.2h11.2" stroke="url(#es-l)" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"/>
+    <circle cx="18.5" cy="15.5" r="2.1" fill="#febe3b"/>
+    <circle cx="18.5" cy="29.7" r="2.1" fill="#14adc4"/>
+    <circle cx="29.7" cy="29.7" r="2.1" fill="#febe3b"/>
+  </g>
+  <rect x="110" y="40" width="3" height="120" fill="#14adc4"/>
+  <text class="d" x="130" y="72" fill="#0a1528" font-size="20" font-weight="800">Your Name</text>
+  <text class="b" x="130" y="96" fill="#0090a5" font-size="13" font-weight="600">Director · LAPTECH</text>
+  <text class="b" x="130" y="128" fill="#162d53" font-size="12">+91 7204906049 · laptech.techinfo@gmail.com</text>
+  <text class="b" x="130" y="152" fill="#7a8da3" font-size="11">Basavanagudi, Bengaluru 560004</text>
+  <text class="d" x="130" y="180" fill="#0a1528" font-size="11" font-weight="800" letter-spacing="0.1em">LAPTECH · Infrastructure · Security · Power</text>
+</svg>
